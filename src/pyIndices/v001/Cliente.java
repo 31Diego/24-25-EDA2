@@ -1,4 +1,4 @@
-package v000;
+package v001;
 
 public class Cliente {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class Cliente {
 
         cargarDatos(gestor);
 
-        // gestor.imprimirDatos();
+        gestor.imprimirDatos();
 
         // System.out.println("> ESTUDIANTES DE PROGRAMACIÓN 2");
         // imprimirDataset(gestor.buscarPorIndice("Asignatura", "Programación 2"));
