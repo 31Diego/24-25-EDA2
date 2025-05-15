@@ -8,8 +8,8 @@ public class Actas {
     public static void main(String[] args) {
 
         Alumno alumnos[] = {
-                new Alumno("carlos", "carlote", 9, 1234),
-                new Alumno("pepe", "pepon", 4, 1235)
+                new Alumno("carlos", "fernandez", 9, 1234),
+                new Alumno("pepe", "gonzalez", 4, 1235)
         };
 
         numeroAlumnos = alumnos.length;
