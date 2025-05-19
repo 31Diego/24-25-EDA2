@@ -1,6 +1,7 @@
 package entregas.martinezDiego.hash;
 
-final class Acta {
+public class ActaHackeada extends Acta {
+
     public static void main(String[] args) {
         DatosAlumno[] alumnos = {
                 new DatosAlumno("Carlos", "Martínez", 12345678, "EDA2", 9.0),
@@ -8,15 +9,18 @@ final class Acta {
                 new DatosAlumno("Juan", "Fernandez", 46678738, "EDA2", 4.0),
         };
 
+        String hash = Hashing.generarHash(alumnos);
+
+        alumnos[2].setNotaFinal(10.0);
+
+        System.out.println("-- ACTA HACKEADA --");
         System.out.println("-- ASIGNATURA: " + alumnos[0].getAsignatura() + " --");
 
-        for (int i = 0; i < alumnos.length; i++) {
-            System.out.println("ALUMNO: " + alumnos[i].getNombreAlumno() + " " + alumnos[i].getApellidosAlumno() + " "
-                    + " ID: " + alumnos[i].getIdAlumno() + " " + "NOTA FINAL " + alumnos[i].getNotaFinal());
+        for (DatosAlumno alumno : alumnos) {
+            System.out.println("ALUMNO: " + alumno.getNombreAlumno() + " " + alumno.getApellidosAlumno() + " "
+                    + "ID: " + alumno.getIdAlumno() + " NOTA FINAL: " + alumno.getNotaFinal());
         }
 
-        String hash = Hashing.generarHash(alumnos);
         System.out.println("Código hash: " + hash);
-
     }
 }

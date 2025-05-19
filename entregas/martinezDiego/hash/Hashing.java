@@ -30,9 +30,9 @@ public class Hashing {
 
         StringBuilder codigoHash = new StringBuilder();
         for (int i = 0; i < datos.length(); i++) {
-            char c = datos.charAt(i);
-            char cifrado = (char) (c + 3);
-            codigoHash.append(cifrado);
+            char caracter = datos.charAt(i);
+            char cifradoCesar = (char) (caracter + 3);
+            codigoHash.append(cifradoCesar);
         }
 
         return codigoHash.toString();

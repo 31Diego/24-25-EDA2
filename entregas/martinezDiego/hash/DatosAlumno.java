@@ -6,19 +6,16 @@ class DatosAlumno {
     private String apellidosAlumno;
     private int idAlumno;
     private String asignatura;
-    private double notaParcial;
     private double notaFinal;
-    private double notaEV;
 
-    public DatosAlumno(String nombreAlumno, String apellidosAlumno, int idAlumno, String asignatura, double notaParcial,
-            double notaFinal, double notaEV) {
+    public DatosAlumno(String nombreAlumno, String apellidosAlumno, int idAlumno, String asignatura,
+            double notaFinal) {
         this.nombreAlumno = nombreAlumno;
         this.apellidosAlumno = apellidosAlumno;
         this.idAlumno = idAlumno;
         this.asignatura = asignatura;
-        this.notaParcial = notaParcial;
         this.notaFinal = notaFinal;
-        this.notaEV = notaEV;
+
     }
 
     public String getNombreAlumno() {
@@ -53,14 +50,6 @@ class DatosAlumno {
         this.asignatura = asignatura;
     }
 
-    public double getNotaParcial() {
-        return notaParcial;
-    }
-
-    public void setNotaParcial(double notaParcial) {
-        this.notaParcial = notaParcial;
-    }
-
     public double getNotaFinal() {
         return notaFinal;
     }
@@ -69,13 +58,4 @@ class DatosAlumno {
         this.notaFinal = notaFinal;
     }
 
-    public double getNotaEV() {
-        return notaEV;
-    }
-
-    public void setNotaEV(double notaEV) {
-        this.notaEV = notaEV;
-    }
-
 }
-
